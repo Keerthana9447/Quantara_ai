@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Syne:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0A0F1E;
+  color: #E2E8F0;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #0A0F1E; }
+::-webkit-scrollbar-thumb { background: #1E2D45; border-radius: 3px; }
+
+/* Glass card */
+.glass {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid #1E2D45;
+  border-radius: 12px;
+}
+
+/* Grid background */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(rgba(0,229,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,255,.03) 1px, transparent 1px);
+}
+
+/* Dark input */
+.inp {
+  width: 100%;
+  background: rgba(13,27,42,.9);
+  border: 1px solid #1E2D45;
+  border-radius: 8px;
+  padding: 9px 13px;
+  color: #E2E8F0;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color .2s;
+}
+.inp:focus { border-color: #00E5FF; box-shadow: 0 0 0 2px #00E5FF18; }
+.inp::placeholder { color: #64748B; }
+
+/* Neon glows */
+.glow-c { box-shadow: 0 0 20px #00E5FF30; }
+.glow-g { box-shadow: 0 0 20px #FFB80030; }
+.glow-p { box-shadow: 0 0 20px #FF3D7130; }
